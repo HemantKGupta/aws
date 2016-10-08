@@ -1,7 +1,0 @@
-#Lambda Function Project Metadata
-#Sat Oct 08 15:39:06 IST 2016
-lastInvokeShowLiveLog=false
-lastDeploymentFunctionName=TestFunction
-lastDeploymentBucketName=test-lambda-hemant
-lastDeploymentEndpoint=https\://lambda.us-west-2.amazonaws.com/
-lastInvokeInput="TestHemant"
