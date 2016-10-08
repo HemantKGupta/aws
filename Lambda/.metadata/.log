@@ -1,0 +1,73 @@
+!SESSION 2016-10-08 19:53:14.686 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/ghemant/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data /Users/ghemant/mine/EclipseProjects/AWS/Lambda -product org.eclipse.epp.package.jee.product -keyring /Users/ghemant/.eclipse_keyring -showlocation
+
+!ENTRY amazon.devtools.brazil.eclipse.BrazilCommonEclipsePlugin 2 -1 2016-10-08 19:53:28.333
+!MESSAGE No existing workspace found
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-10-08 19:53:28.385
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY amazon.devtools.brazil.eclipse.BrazilEclipsePlugin 4 0 2016-10-08 19:53:32.252
+!MESSAGE Error prefetching package names
+!STACK 0
+java.lang.RuntimeException: Error prefetching package names
+	at amazon.devtools.brazil.eclipse.wizards.NewBrazilJavaProjectFirstPage.updatePackageSet(NewBrazilJavaProjectFirstPage.java:454)
+	at amazon.devtools.brazil.eclipse.jobs.GetPackageNamesJob.run(GetPackageNamesJob.java:24)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: amazon.tinybmds.BMDSClientException: Unable to query BMDS!
+	at amazon.tinybmds.BMDSClient.callBMDSMethod(BMDSClient.java:1336)
+	at amazon.tinybmds.BMDSClient.callBMDSMethod(BMDSClient.java:1290)
+	at amazon.tinybmds.BMDSClient.getPackageNames(BMDSClient.java:402)
+	at amazon.devtools.brazil.bmds.BMDS.getPackageNames(BMDS.java:28)
+	at amazon.devtools.brazil.eclipse.wizards.NewBrazilJavaProjectFirstPage.updatePackageSet(NewBrazilJavaProjectFirstPage.java:451)
+	... 2 more
+Caused by: amazon.resting.RESTException: Error while invoking remote method (tried 3 times):http://brazil-metadata.amazon.com:80/BMDS?method=getPackageNames&prefix=
+Status Code: 1001
+Status Description: Unable to complete the HTTP call due to a communication error with the remote server. brazil-metadata.amazon.com
+	at amazon.resting.RESTUtils.invokeCall(RESTUtils.java:311)
+	at amazon.resting.RESTUtils.getResourceByMethodAndParameters(RESTUtils.java:92)
+	at amazon.resting.RESTUtils.getResource(RESTUtils.java:69)
+	at amazon.tinybmds.BMDSClient.getResource(BMDSClient.java:1356)
+	at amazon.tinybmds.BMDSClient.callBMDSMethod(BMDSClient.java:1329)
+	... 6 more
+
+!ENTRY org.eclipse.osgi 2 0 2016-10-08 19:53:34.166
+!MESSAGE While loading class "com.amazonaws.eclipse.core.AwsToolkitCore", thread "Thread[Worker-3,5,main]" timed out waiting (5002ms) for thread "Thread[Worker-2,5,main]" to finish starting bundle "com.amazonaws.eclipse.core_2.3.1.v201608241536 [893]". To avoid deadlock, thread "Thread[Worker-3,5,main]" is proceeding but "com.amazonaws.eclipse.core.AwsToolkitCore" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="com.amazonaws.eclipse.core"; type="osgi.bundle"; version:Version="2.3.1.v201608241536"; singleton:="true" [id=893] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:391)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at com.amazonaws.eclipse.ec2.keypairs.KeyPairManager.convertLegacyPrivateKeyFiles(KeyPairManager.java:242)
+	at com.amazonaws.eclipse.ec2.Ec2Plugin$2.run(Ec2Plugin.java:120)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-10-08 19:53:34.362
+!MESSAGE No profile found: default
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-10-08 19:53:34.382
+!MESSAGE Monitoring content of /Users/ghemant/.aws/credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-10-08 19:53:34.447
+!MESSAGE AWS toolkit core plugin initialized after 6061 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-10-08 19:53:34.453
+!MESSAGE The current accountId is not found in the system. Switching to the default account.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-10-08 19:53:36.033
+!MESSAGE Initialized a new Cognito identity us-east-1:09d88711-3506-45c4-ab6b-4816e910e009

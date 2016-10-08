@@ -1,0 +1,3 @@
+1475906267078	Move file
+1475906313390	Move 'moviedata.json' to 'DynamoDB'
+1475934542694	Extract method 'createTable'

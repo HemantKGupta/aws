@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.amazonaws.auth.profile.ProfileCredentialsProvider"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.ListTablesResult"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.TableCollection"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.spec.QuerySpec"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.utils.ValueMap"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.ItemCollection"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.QueryOutcome"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.ScanRequest"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.ScanResult"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.AttributeValue"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.GlobalSecondaryIndex"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.CreateTableRequest"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.Table"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.KeyType"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.KeySchemaElement"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.Projection"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.ProjectionType"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.AttributeDefinition"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.Item"/>
+</qualifiedTypeNameHistroy>

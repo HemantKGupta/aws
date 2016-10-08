@@ -1,0 +1,27 @@
+import java.util.Iterator;
+
+import com.amazonaws.auth.profile.ProfileCredentialsProvider;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
+import com.amazonaws.services.dynamodbv2.document.DynamoDB;
+import com.amazonaws.services.dynamodbv2.document.Table;
+import com.amazonaws.services.dynamodbv2.document.TableCollection;
+import com.amazonaws.services.dynamodbv2.model.ListTablesResult;
+public class ListTables {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		DynamoDB dynamoDB = new DynamoDB(new AmazonDynamoDBClient(
+			    new ProfileCredentialsProvider()));
+
+			TableCollection<ListTablesResult> tables = dynamoDB.listTables();
+			Iterator<Table> iterator = tables.iterator();
+
+			while (iterator.hasNext()) {
+				Table table = iterator.next();
+				System.out.println(table.getTableName());
+			}
+
+	}
+
+}
